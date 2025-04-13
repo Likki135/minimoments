@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniMoments – Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lottie Player CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- FontAwesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Custom Theme Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#fcb045",
+              secondary: "#ff6a00",
+              accent: "#ee0979",
+              muted: "#b76e79",
+              background: "#fff0f5",
+            },
+            animation: {
+              fadeIn: "fadeIn 1s ease-out both",
+              bounce: "bounce 1s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0, transform: "translateY(30px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #d0eaff, #ffd1dc);
+        margin: 0;
+        padding-top: 80px;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 182, 193, 0.7),
+          rgba(255, 228, 196, 0.7)
+        );
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="navbar text-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <h1
+          class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text"
+        >
+          MiniMoments
+        </h1>
+        <nav class="space-x-4 text-sm sm:space-x-6 sm:text-base">
+          <a href="index.html" class="hover:text-secondary">Home</a>
+          <a href="gallery.html" class="hover:text-secondary">Gallery</a>
+          <a href="deals.html" class="hover:text-secondary">Deals</a>
+          <a href="order.html" class="hover:text-secondary">Order</a>
+          <a href="contact.html" class="hover:text-secondary">Contact</a>
+          <a href="login.html"
+            ><i class="fas fa-user text-lg sm:text-xl"></i
+          ></a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 sm:py-24 text-gray-800 animate-fadeIn">
+      <div class="max-w-2xl mx-auto px-4">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text"
+        >
+          Make Your Memories</br> Mini & Magical
+        </h1>
+        <p class="text-base sm:text-lg mb-6 text-gray-700">
+          Premium custom photo frames. Crafted with love for your favorite
+          moments.
+        </p>
+
+        <img
+          src="images/img0.png"
+          alt="MiniMoments"
+          class="mx-auto mb-6 w-40 sm:w-64 h-auto rounded-lg shadow-md"
+        />
+
+        <div
+          class="space-y-3 sm:space-x-4 sm:space-y-0 flex flex-col sm:flex-row justify-center items-center"
+        >
+          <a
+            href="gallery.html"
+            class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-semibold shadow hover:opacity-90 w-44 text-center"
+          >
+            Explore Gallery
+          </a>
+          <a
+            href="register.html"
+            class="border-2 border-secondary text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white w-44 text-center"
+          >
+            Register Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 text-gray-800 animate-fadeIn px-4">
+      <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 text-center">
+        <div
+          class="bg-white bg-opacity-40 backdrop-blur-lg rounded-xl p-6 shadow-lg"
+        >
+          <i class="fas fa-gift text-4xl text-secondary mb-4"></i>
+          <h3 class="font-semibold text-lg">Perfect Gifts</h3>
+          <p class="text-sm text-muted">
+            Surprise your loved ones with personalized frames for birthdays,
+            anniversaries, and more.
+          </p>
+        </div>
+        <div
+          class="bg-white bg-opacity-40 backdrop-blur-lg rounded-xl p-6 shadow-lg"
+        >
+          <i class="fas fa-tags text-4xl text-secondary mb-4"></i>
+          <h3 class="font-semibold text-lg">Affordable Pricing</h3>
+          <p class="text-sm text-muted">
+            Beautiful keepsakes at budget-friendly prices.
+          </p>
+        </div>
+        <div
+          class="bg-white bg-opacity-40 backdrop-blur-lg rounded-xl p-6 shadow-lg"
+        >
+          <i class="fas fa-truck text-4xl text-secondary mb-4"></i>
+          <h3 class="font-semibold text-lg">Fast Delivery</h3>
+          <p class="text-sm text-muted">
+            Quick doorstep delivery available across India.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-r from-primary to-secondary text-center py-4 mt-12 text-white"
+    >
+      <p class="text-sm">&copy; 2025 MiniMoments. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a
+      href="https://wa.me/919640958619"
+      target="_blank"
+      class="fixed bottom-24 right-5 bg-green-500 text-white p-3 rounded-full shadow-lg hover:opacity-90 z-50 animate-bounce"
+    >
+      <i class="fab fa-whatsapp text-xl"></i>
+    </a>
+    <a
+      href="order.html"
+      class="fixed bottom-5 right-5 bg-gradient-to-r from-primary to-secondary text-white p-3 rounded-full shadow-lg hover:opacity-90 z-50 animate-bounce"
+    >
+      <i class="fas fa-shopping-cart text-xl"></i>
+    </a>
+  </body>
+</html>
